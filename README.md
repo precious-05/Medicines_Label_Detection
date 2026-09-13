@@ -2,14 +2,18 @@
 
 # Medicine Label Detection and Recognition
 
-An automated computer vision pipeline that detects medicine packaging and extracts medicine names from label text. The system uses a custom-trained YOLOv8 model for detection and EasyOCR for text recognition. The pipeline supports single images and videos and produces annotated frames with detected boxes and recognized text.
+An automated computer vision pipeline that detects medicine packaging and extracts medicine names from label text. The system uses a custom-trained YOLOv8 model for detection and EasyOCR for text recognition.
 
-<p>
-  <img src="assets/python.svg" alt="Python" width="48" height="48" />
-  <img src="assets/jupyter.svg" alt="Jupyter Notebook" width="48" height="48" />
-  <img src="assets/opencv.svg" alt="OpenCV" width="48" height="48" />
-  <img src="assets/ultralytics.svg" alt="Ultralytics YOLOv8" width="48" height="48" />
-  <img src="assets/pytorch.svg" alt="PyTorch" width="48" height="48" />
+<h2 align="center">Tech Stack</h2>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="36" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original-wordmark.svg" alt="Jupyter" width="36" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg" alt="PyTorch" width="36" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/opencv/opencv-original.svg" alt="OpenCV" width="36" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg" alt="NumPy" width="36" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" width="36" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg" alt="Pandas" width="36" />
 </p>
 
 </div>
@@ -55,18 +59,6 @@ Adjust file paths for model weights and input data in the notebook before runnin
 
 - Provide YOLOv8 weights trained on labeled images of medicine packaging. Update the notebook to point to your weights file.
 - Place example images or videos in a folder and update notebook paths for inference.
-
-## Adding icons
-
-Place the following files in an `assets/` directory at the repository root:
-
-- assets/python.svg
-- assets/jupyter.svg
-- assets/opencv.svg
-- assets/ultralytics.svg
-- assets/pytorch.svg
-
-SVG files are included in this commit. If you prefer different logos, replace the files in the assets/ directory.
 
 ## Contributing
 
