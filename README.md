@@ -1,33 +1,83 @@
+<div align="center">
+
 # Medicine Label Detection and Recognition
 
-An automated computer vision pipeline that detects medicine boxes and extracts the medicine names. The system utilizes YOLOv8 to locate the packaging and EasyOCR to read the specific label text, outputting results with a custom, high-contrast overlay.
+An automated computer vision pipeline that detects medicine packaging and extracts medicine names from label text. The system uses a custom-trained YOLOv8 model for detection and EasyOCR for text recognition. The pipeline supports single images and videos and produces annotated frames with detected boxes and recognized text.
 
-## Tech Stack
+<p>
+  <img src="assets/python.svg" alt="Python" width="48" height="48" />
+  <img src="assets/jupyter.svg" alt="Jupyter Notebook" width="48" height="48" />
+  <img src="assets/opencv.svg" alt="OpenCV" width="48" height="48" />
+  <img src="assets/ultralytics.svg" alt="Ultralytics YOLOv8" width="48" height="48" />
+  <img src="assets/pytorch.svg" alt="PyTorch" width="48" height="48" />
+</p>
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Jupyter Notebook](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
-![Ultralytics](https://img.shields.io/badge/Ultralytics_YOLOv8-000000?style=flat-square)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+</div>
 
-## Core Features
+<div align="center">
 
-* **Targeted Detection:** Uses a custom-trained YOLOv8 nano model to isolate medicine packaging within complex backgrounds.
-* **Focused OCR Extraction:** Crops the detected region before passing it to EasyOCR to prevent background text interference and ensure high accuracy.
-* **Video and Image Support:** Processes static images and frame-by-frame video files.
-* **Premium Visual Output:** Renders anti-aliased bright yellow text on a dark semi-transparent card, combined with a translucent green bounding box fill for clear visibility.
+## Key features
 
-## Pipeline Overview
+- Targeted detection using a custom YOLOv8 nano model to locate medicine packaging in complex scenes.
+- Focused OCR extraction by cropping detected regions before passing them to EasyOCR to reduce background noise.
+- Support for images and video: process single frames or entire videos frame by frame.
+- Clear visual output: annotated bounding boxes with semi-transparent fill and a dark text card for high contrast.
 
-1. **Frame Input:** The image or video frame is loaded and converted to the correct color space (RGB for OCR/Detection, BGR for OpenCV rendering)
-2. **Object Detection:** YOLOv8 scans the frame and returns the exact coordinates of the medicine label
-3. **Cropping:** The identified bounding box region is extracted from the original image
-4. **Text Recognition:** EasyOCR reads the text strictly from the cropped section
-5. **Rendering:** OpenCV creates a transparent overlay, draws the filled bounding box, generates the dark text card, and applies the recognized text back onto the original frame
+## Pipeline overview
+
+1. Frame input: load an image or a video frame and convert color spaces as required for detection and OCR.
+2. Object detection: YOLOv8 returns bounding box coordinates for detected medicine packaging.
+3. Cropping: extract the bounding box region from the original frame.
+4. Text recognition: pass the cropped region to EasyOCR and obtain detected text.
+5. Rendering: draw the bounding box, create a dark text card, and render the OCR result onto the original frame.
+
+</div>
 
 ## Installation
 
-Ensure you have a Python environment set up, preferably within Kaggle or Google Colab. Install the required dependencies:
+Set up a Python environment. We recommend using a fresh virtual environment, Conda, or Google Colab.
+
+Install required packages:
 
 ```bash
 pip install ultralytics easyocr opencv-python matplotlib numpy
+```
+
+## Usage
+
+- Open and run the main notebook included in this repository.
+- For images: set the path to an input image and model weights, then run the image inference cell.
+- For video: set the path to an input video and model weights, then run the video processing cell to generate an annotated output video.
+
+Adjust file paths for model weights and input data in the notebook before running.
+
+## Model and data
+
+- Provide YOLOv8 weights trained on labeled images of medicine packaging. Update the notebook to point to your weights file.
+- Place example images or videos in a folder and update notebook paths for inference.
+
+## Adding icons
+
+Place the following files in an `assets/` directory at the repository root:
+
+- assets/python.svg
+- assets/jupyter.svg
+- assets/opencv.svg
+- assets/ultralytics.svg
+- assets/pytorch.svg
+
+SVG files are included in this commit. If you prefer different logos, replace the files in the assets/ directory.
+
+## Contributing
+
+If you add model weights, sample data, or example notebooks, please include short usage notes and attribution for data sources.
+
+## Credits
+
+- Detection: Ultralytics YOLOv8
+- OCR: EasyOCR
+- Image processing and rendering: OpenCV
+
+## License
+
+Add or update a LICENSE file to specify the desired license for this repository. If you prefer a permissive license, consider adding an MIT License file.
