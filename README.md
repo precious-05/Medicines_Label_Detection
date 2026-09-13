@@ -1,74 +1,79 @@
-<div align="center">
+# Medicine Label Detection, Recognition and Automated Billing Pipeline
 
-# Medicine Label Detection and Recognition
+An advanced computer vision pipeline that detects medicine packaging, extracts label text via OCR, performs fuzzy database matching, and renders a real-time smart billing dashboard overlay onto videos. The system combines a custom-trained YOLOv8 nano model, EasyOCR, and a dynamic price-tracking database.
 
-An automated computer vision pipeline that detects medicine packaging and extracts medicine names from label text. The system uses a custom-trained YOLOv8 model for detection and EasyOCR for text recognition.
+## Video Demo
 
-<h2 align="center">Tech Stack</h2>
+[Watch the demo video](https://github.com/user-attachments/assets/8d9a8e99-f00f-47ad-a586-bb9a4a42524b)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="36" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original-wordmark.svg" alt="Jupyter" width="36" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg" alt="PyTorch" width="36" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/opencv/opencv-original.svg" alt="OpenCV" width="36" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg" alt="NumPy" width="36" />
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" width="36" />
-</p>
+## Tech Stack
 
-</div>
+* Python
+* Jupyter Notebook
+* PyTorch
+* OpenCV
+* NumPy
+* Matplotlib
 
-<div align="center">
+## Key Features
 
-## Key features
+* **Targeted Detection:** Uses a custom YOLOv8 nano model to accurately locate medicine packaging within complex video frames.
+* **Focused OCR Extraction:** Crops detected bounding box regions before passing them to EasyOCR to significantly minimize background noise and improve recognition accuracy.
+* **Fuzzy Text Matching & Database Lookup:** Employs Python's `difflib` and substring fallback mechanisms to safely match imperfect OCR results against a predefined price database.
+* **Real-Time Live Billing Dashboard:** Automatically compiles unique scanned medicines, itemizes individual prices, and computes a live grand total on the fly.
+* **Non-Intrusive Bottom-Right UI:** Features a compact, semi-transparent dark-mode dashboard positioned cleanly at the bottom-right corner to prevent obstructing active video objects.
+* **Video & Image Support:** Processes single frames or complete video streams frame-by-frame with robust codec management (with automatic fallback from `avc1` to `mp4v`).
 
-- Targeted detection using a custom YOLOv8 nano model to locate medicine packaging in complex scenes.
-- Focused OCR extraction by cropping detected regions before passing them to EasyOCR to reduce background noise.
-- Support for images and video: process single frames or entire videos frame by frame.
-- Clear visual output: annotated bounding boxes with semi-transparent fill and a dark text card for high contrast.
+## Pipeline Overview
 
-## Pipeline overview
+1. **Frame Input:** Load a video frame and convert color channels as required.
+2. **Object Detection:** YOLOv8 detects packaging boxes and returns spatial coordinates.
+3. **Region Cropping:** Isolate the bounding box sub-image from the frame.
+4. **Text Recognition:** Pass the cropped region to EasyOCR to extract raw text strings.
+5. **Database Matching:** Query the price dictionary using fuzzy logic to retrieve clean item names and pricing.
+6. **Dashboard & HUD Rendering:** Update the unique item dictionary, calculate running totals, and render both the localized bounding boxes and the bottom-right summary ledger.
 
-1. Frame input: load an image or a video frame and convert color spaces as required for detection and OCR.
-2. Object detection: YOLOv8 returns bounding box coordinates for detected medicine packaging.
-3. Cropping: extract the bounding box region from the original frame.
-4. Text recognition: pass the cropped region to EasyOCR and obtain detected text.
-5. Rendering: draw the bounding box, create a dark text card, and render the OCR result onto the original frame.
+## Use Cases
 
-</div>
+* **Smart Pharmacy Point of Sale (POS) / Checkout:** Automate retail billing counters where cashiers or automated conveyors pass medicine boxes through a camera view to instantly generate itemized bills.
+* **Inventory Auditing & Stock Management:** Streamline warehouse or pharmacy stock-taking by holding a camera over stacked shelves to automatically count and value detected items.
+* **Hospital Ward Medication Tracking:** Assist nursing staff in logging and verifying administered medication packages and tracking daily treatment costs.
+* **Elderly Home Care & Smart Pillbox Management:** Help caregivers keep digital ledgers of home-stored medicines and calculate replenishment expenses automatically.
 
 ## Installation
 
-Set up a Python environment. We recommend using a fresh virtual environment, Conda, or Google Colab.
+Set up a Python environment using a virtual environment, Conda, or Google Colab.
 
-Install required packages:
+Install the required packages:
 
 ```bash
 pip install ultralytics easyocr opencv-python matplotlib numpy
+
 ```
 
 ## Usage
 
-- Open and run the main notebook included in this repository.
-- For images: set the path to an input image and model weights, then run the image inference cell.
-- For video: set the path to an input video and model weights, then run the video processing cell to generate an annotated output video.
+1. Place your trained model weights (`medicine.pt`) and target video (`me3.mp4`) in your workspace directory.
+2. Run the video processing pipeline script:
 
-Adjust file paths for model weights and input data in the notebook before running.
+```python
+input_vid  = 'me3.mp4'
+output_vid = 'm4.mp4'
+process_video(input_vid, output_vid)
 
-## Model and data
+```
 
-- Provide YOLOv8 weights trained on labeled images of medicine packaging. Update the notebook to point to your weights file.
-- Place example images or videos in a folder and update notebook paths for inference.
+## Model and Data
+
+* Provide YOLOv8 weights trained on custom medicine packaging datasets.
+* Update file directory paths within the script according to your local environment configuration.
 
 ## Contributing
 
-If you add model weights, sample data, or example notebooks, please include short usage notes and attribution for data sources.
+Pull requests, feature expansions (such as expanded database integrations or UI themes), and bug reports are welcome.
 
 ## Credits
 
-- Detection: Ultralytics YOLOv8
-- OCR: EasyOCR
-- Image processing and rendering: OpenCV
-
-## License
-
-Add or update a LICENSE file to specify the desired license for this repository. If you prefer a permissive license, consider adding an MIT License file.
+* **Detection:** Ultralytics YOLOv8
+* **OCR:** EasyOCR
+* **Video Processing & UI Rendering:** OpenCV & NumPy
