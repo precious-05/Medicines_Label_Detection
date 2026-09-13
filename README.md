@@ -6,14 +6,26 @@ An advanced computer vision pipeline that detects medicine packaging, extracts l
 
 [Watch the demo video](https://github.com/user-attachments/assets/8d9a8e99-f00f-47ad-a586-bb9a4a42524b)
 
-## Tech Stack
+<h2 align="center">Tech Stack</h2>
 
-* Python
-* Jupyter Notebook
-* PyTorch
-* OpenCV
-* NumPy
-* Matplotlib
+<p align="center">
+
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="36" />
+
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original-wordmark.svg" alt="Jupyter" width="36" />
+
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg" alt="PyTorch" width="36" />
+
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/opencv/opencv-original.svg" alt="OpenCV" width="36" />
+
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg" alt="NumPy" width="36" />
+
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" width="36" />
+
+</p>
+
+
+</div>
 
 ## Key Features
 
