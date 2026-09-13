@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120" role="img" aria-labelledby="title">
-  <title id="title">Python</title>
-  <rect width="100%" height="100%" fill="none"/>
-  <text x="50%" y="60%" font-family="Helvetica, Arial, sans-serif" font-size="56" fill="#111" text-anchor="middle" dominant-baseline="middle">Python</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="pythonTitle">
+  <title id="pythonTitle">Python</title>
+  <defs>
+    <linearGradient id="pyBlue" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#3A7EBB"/>
+      <stop offset="1" stop-color="#2B6F9E"/>
+    </linearGradient>
+    <linearGradient id="pyYellow" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFD43B"/>
+      <stop offset="1" stop-color="#FFB900"/>
+    </linearGradient>
+  </defs>
+  <!-- simplified two-snake Python mark -->
+  <g transform="translate(36,20)">
+    <path d="M72 0c-20 0-36 16-36 36v8c0 8 6 14 14 14h24v-6c0-10 8-18 18-18h14c6 0 12-6 12-12V12C124 6 98 0 72 0z" fill="url(#pyBlue)"/>
+    <circle cx="40" cy="20" r="4" fill="#fff"/>
+    <path d="M72 112c20 0 36-16 36-36v-8c0-8-6-14-14-14H70v6c0 10-8 18-18 18H38c-6 0-12 6-12 12v20c0 6 26 12 52 12z" fill="url(#pyYellow)"/>
+    <circle cx="84" cy="92" r="4" fill="#111"/>
+  </g>
 </svg>
