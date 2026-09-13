@@ -1,4 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="16" fill="#3776AB"/>
-  <text x="50" y="58" font-family="Arial, Helvetica, sans-serif" font-size="36" fill="#fff" text-anchor="middle">Py</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#3776AB" />
+      <stop offset="1" stop-color="#2A6FA0" />
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFD43B" />
+      <stop offset="1" stop-color="#FFB400" />
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="32" fill="none" />
+  <!-- Top blue shape -->
+  <path d="M170 28c-24-2-56 4-74 20-20 18-22 40-22 56 0 18 10 34 34 36s36-8 48-18c10-8 26-18 46-16 22 2 30 18 30 34 0 28-18 48-46 58-18 6-40 10-62 8-16-2-34-8-44-16" fill="url(#g1)" />
+  <!-- Bottom yellow shape -->
+  <path d="M86 228c24 2 56-4 74-20 20-18 22-40 22-56 0-18-10-34-34-36s-36 8-48 18c-10 8-26 18-46 16-22-2-30-18-30-34 0-28 18-48 46-58 18-6 40-10 62-8 16 2 34 8 44 16" fill="url(#g2)" />
+  <!-- Eyes -->
+  <circle cx="88" cy="80" r="6" fill="#fff" />
+  <circle cx="168" cy="176" r="6" fill="#fff" />
 </svg>

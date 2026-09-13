@@ -1,4 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="16" fill="#5C3EE8"/>
-  <text x="50" y="58" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#fff" text-anchor="middle">CV</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" width="180" height="60">
+  <rect width="120" height="40" rx="8" fill="none"/>
+  <!-- three overlapping circles like OpenCV mark -->
+  <g transform="translate(16,20)">
+    <circle cx="0" cy="0" r="12" fill="#E8242D" fill-opacity="1" />
+  </g>
+  <g transform="translate(36,20)">
+    <circle cx="0" cy="0" r="12" fill="#00A86B" fill-opacity="0.95" />
+  </g>
+  <g transform="translate(56,20)">
+    <circle cx="0" cy="0" r="12" fill="#2185D0" fill-opacity="0.95" />
+  </g>
+  <!-- small text CV -->
+  <text x="86" y="26" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#333">OpenCV</text>
 </svg>
