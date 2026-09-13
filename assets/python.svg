@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="pythonTitle">
-  <title id="pythonTitle">Python</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="pythonTitle">
+  <title id="pythonTitle">Python logo</title>
   <defs>
     <linearGradient id="pyBlue" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#3A7EBB"/>
+      <stop offset="0" stop-color="#3776AB"/>
       <stop offset="1" stop-color="#2B6F9E"/>
     </linearGradient>
     <linearGradient id="pyYellow" x1="0" x2="1" y1="0" y2="1">
@@ -10,11 +10,11 @@
       <stop offset="1" stop-color="#FFB900"/>
     </linearGradient>
   </defs>
-  <!-- simplified two-snake Python mark -->
-  <g transform="translate(36,20)">
-    <path d="M72 0c-20 0-36 16-36 36v8c0 8 6 14 14 14h24v-6c0-10 8-18 18-18h14c6 0 12-6 12-12V12C124 6 98 0 72 0z" fill="url(#pyBlue)"/>
-    <circle cx="40" cy="20" r="4" fill="#fff"/>
-    <path d="M72 112c20 0 36-16 36-36v-8c0-8-6-14-14-14H70v6c0 10-8 18-18 18H38c-6 0-12 6-12 12v20c0 6 26 12 52 12z" fill="url(#pyYellow)"/>
-    <circle cx="84" cy="92" r="4" fill="#111"/>
+  <!-- simplified official Python mark: two interlocking shapes -->
+  <g transform="translate(28,24) scale(1.6)">
+    <path d="M64 0c-17 0-30 7-39 14-11 9-17 22-17 35 0 12 4 22 13 30 9 8 20 10 35 10h18c6 0 11-5 11-11V58c0-6-5-11-11-11H54c-6 0-11-5-11-11V22c0-6 5-11 11-11h22c6 0 11-5 11-11V0H64z" fill="url(#pyBlue)"/>
+    <circle cx="28" cy="16" r="6" fill="#fff"/>
+    <path d="M64 96c17 0 30-7 39-14 11-9 17-22 17-35 0-12-4-22-13-30-9-8-20-10-35-10H56c-6 0-11 5-11 11v18c0 6 5 11 11 11h30c6 0 11 5 11 11v22c0 6-5 11-11 11H64z" fill="url(#pyYellow)"/>
+    <circle cx="96" cy="80" r="6" fill="#111"/>
   </g>
 </svg>

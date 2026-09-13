@@ -1,13 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="ptTitle">
-  <title id="ptTitle">PyTorch</title>
-  <rect width="120" height="120" rx="18" fill="none"/>
-  <!-- stylized flame mark in PyTorch gradient -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="ptTitle">
+  <title id="ptTitle">PyTorch logo</title>
   <defs>
     <linearGradient id="ptGrad" x1="0" x2="1">
       <stop offset="0" stop-color="#EE4C2C"/>
       <stop offset="1" stop-color="#FF6A3D"/>
     </linearGradient>
   </defs>
+  <rect width="120" height="120" rx="18" fill="none"/>
   <path d="M60 18c-8 10-10 18-10 28 0 16 12 20 22 30 6-8 18-12 18-30 0-14-18-22-30-28z" fill="url(#ptGrad)" />
   <text x="60" y="108" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#111" text-anchor="middle">PyTorch</text>
 </svg>

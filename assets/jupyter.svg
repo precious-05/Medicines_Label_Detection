@@ -1,16 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="jupyterTitle">
-  <title id="jupyterTitle">Jupyter</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="jupyterTitle">
+  <title id="jupyterTitle">Jupyter logo</title>
   <defs>
     <linearGradient id="jupOrange" x1="0" x2="1">
-      <stop offset="0" stop-color="#F3702B"/>
-      <stop offset="1" stop-color="#F57C2E"/>
+      <stop offset="0" stop-color="#F37626"/>
+      <stop offset="1" stop-color="#F2942A"/>
     </linearGradient>
   </defs>
   <rect width="120" height="120" rx="18" fill="none"/>
-  <!-- orbit ring -->
   <g transform="translate(60,60)">
-    <ellipse rx="34" ry="26" fill="none" stroke="url(#jupOrange)" stroke-width="10" stroke-linecap="round"/>
-    <circle cx="34" cy="-26" r="6" fill="url(#jupOrange)"/>
-    <circle r="8" fill="#F3702B" />
+    <ellipse rx="36" ry="26" fill="none" stroke="url(#jupOrange)" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="36" cy="-26" r="6" fill="url(#jupOrange)"/>
+    <circle r="8" fill="#F37626"/>
   </g>
 </svg>

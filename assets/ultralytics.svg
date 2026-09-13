@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80" role="img" aria-labelledby="ultraTitle">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" role="img" aria-labelledby="ultraTitle">
   <title id="ultraTitle">Ultralytics YOLOv8</title>
   <rect width="300" height="80" rx="8" fill="none"/>
   <text x="12" y="36" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#111" font-weight="700">Ultralytics</text>
   <g transform="translate(200,20)">
     <rect x="0" y="6" width="72" height="36" rx="6" fill="#FF6B6B" />
-    <text x="36" y="33" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#fff" text-anchor="middle">YOLOv8</text>
+    <text x="36" y="33" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#fff" text-anchor="middle">YOLOv8</text>
   </g>
 </svg>
