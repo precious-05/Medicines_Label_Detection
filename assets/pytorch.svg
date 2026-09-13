@@ -1,7 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
-  <rect width="120" height="120" rx="18" fill="none"/>
-  <!-- stylized flame -->
-  <path d="M60 20c-8 10-10 18-10 28 0 16 12 20 22 30 6-8 18-12 18-30 0-14-18-22-30-28z" fill="#EE4C2C"/>
-  <path d="M60 36c-4 6-5 10-5 15 0 9 6 11 11 16 3-4 9-6 9-16 0-8-8-12-15-15z" fill="#F9BDB0"/>
-  <text x="60" y="108" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#333" text-anchor="middle">PyTorch</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" width="360" height="120" role="img" aria-labelledby="title">
+  <title id="title">PyTorch</title>
+  <rect width="100%" height="100%" fill="none"/>
+  <text x="50%" y="60%" font-family="Helvetica, Arial, sans-serif" font-size="56" fill="#111" text-anchor="middle" dominant-baseline="middle">PyTorch</text>
 </svg>
